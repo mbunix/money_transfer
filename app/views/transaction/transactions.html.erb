@@ -1,0 +1,19 @@
+<h2>Top-up from M-Pesa</h2>
+
+<p>Your current balance is <%= current_user.balance %></p>
+
+<%= form_with(url: "/transactions/topup", method: :post) do |form| %>
+  <div>
+    <%= label_tag(:amount, "Amount") %>
+    <%= number_field_tag(:amount) %>
+  </div>
+
+  <div>
+    <%= label_tag(:phone_number, "Phone Number") %>
+    <%= text_field_tag(:phone_number) %>
+  </div>
+
+  <div>
+    <%= submit_tag("Top-up") %>
+  </div>
+<% end %>

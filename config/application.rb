@@ -18,6 +18,7 @@ module MoneyTransfer
     ENV[key.to_s] = value
     end 
     end
+    require 'devise/orm/active_record' 
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.

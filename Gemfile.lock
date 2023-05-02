@@ -142,6 +142,7 @@ GEM
       rack (>= 2.2.3)
       rack-protection
     orm_adapter (0.5.0)
+    pg (1.5.3-x64-mingw-ucrt)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -189,6 +190,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    securerandom (0.2.2)
     sqlite3 (1.6.2-x64-mingw-ucrt)
     thor (1.2.1)
     timeout (0.3.2)
@@ -218,10 +220,12 @@ DEPENDENCIES
   ffi (~> 1.15, >= 1.15.5)
   jbuilder
   omniauth (~> 2.1, >= 2.1.1)
+  pg
   puma (~> 5.0)
   rack-cors (~> 2.0, >= 2.0.1)
   rails (~> 7.0.4, >= 7.0.4.3)
   rest-client (~> 2.1)
+  securerandom (~> 0.2.2)
   sqlite3 (~> 1.4)
   tzinfo-data
 

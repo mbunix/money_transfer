@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+ 
   resources :mpesas
   mount_devise_token_auth_for 'User', at: 'auth'
   namespace :api do
     namespace :v1 do
       resources :transactions do
+      resources :report, only: [:new, :create]
       post :top_up, on: :collection
+      post 'transactions/top_up', to: 'transactions#top_up'
       post 'stkpush', to: 'mpesas#stkpush'
       post 'stkquery', to: 'mpesas#stkquery'
       end
@@ -17,4 +20,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+   root "rails/singin#index"
 end

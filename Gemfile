@@ -28,6 +28,10 @@ gem 'rack-cors', '~> 2.0', '>= 2.0.1'
 gem 'rest-client', '~> 2.1'
 #
 gem 'ffi', '~> 1.15', '>= 1.15.5'
+#
+gem 'securerandom', '~> 0.2.2'
+#
+gem 'pg'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
