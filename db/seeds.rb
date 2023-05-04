@@ -9,10 +9,9 @@
 
 confirmed_at = Time.now.utc
 # Create a user with some transactions
-10.times do |i|
 user = User.create!(
   name: "John Doe",
-  email: "bitbox@gmail.com",
+  email: "spectre@gmail.com",
   password: "password",
  
 )
@@ -21,8 +20,7 @@ loop do
     break unless User.exists?(confirmation_token: confirmation_token)
   end
   
-  puts "User #{i + 1} created"
-end
+
 # Add some transactions for the user
 user.transactions.create!(
   amount: 1000,

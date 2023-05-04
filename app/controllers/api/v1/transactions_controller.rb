@@ -1,6 +1,9 @@
 class Api::V1::TransactionsController < ApplicationController
    before_action :authenticate_user!
-
+  
+  def new
+    @transaction = current_user.transactions.new
+  end
   def index
     @transactions = Transaction.where("sender_id = ? OR receiver_id = ?", current_user.id, current_user.id)
     render json: @transactions

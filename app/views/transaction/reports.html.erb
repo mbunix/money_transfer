@@ -1,0 +1,20 @@
+<h1>Transaction Reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Reciever</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.amount %></td>
+        <td><%= transaction.reciever.name %></td>
+        <td><%= transaction.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
